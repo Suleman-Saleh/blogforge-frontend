@@ -36,6 +36,25 @@
   font-weight: 600;
 }
 
+[data-theme="light"] .nav-item {
+  color: #495057;
+}
+
+[data-theme="light"] .nav-item:hover {
+  background: #e9ecef;
+  color: #000;
+}
+
+/* Fix the "New Blog" and "My Blogs" buttons in the topbar */
+[data-theme="light"] .btn-ghost {
+  background: #fff;
+  color: var(--text);
+  border-color: var(--border);
+}
+
+[data-theme="light"] .btn-primary {
+  color: #000 !important; /* Ensure black text on the gold button */
+}
       :root[data-theme="dark"] {
         --bg: #0a0a0f;
         --surface: #13131a;

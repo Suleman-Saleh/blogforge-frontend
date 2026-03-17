@@ -36,6 +36,17 @@
   font-weight: 600;
 }
 
+/* Specific overrides for Light Mode */
+[data-theme="light"] .page-title {
+  color: var(--text);
+}
+
+[data-theme="light"] .nav-section {
+  color: #495057; /* Darker grey for MAIN and CONFIG labels */
+  opacity: 1;
+  font-weight: 600;
+}
+
 [data-theme="light"] .nav-item {
   color: #495057;
 }
@@ -1060,7 +1071,7 @@ background: var(--surface);
             <div class="form-group">
               <label>Appearance</label>
               <select id="theme-select" onchange="changeTheme(this.value)">
-                <option value="system">System Preference</option>
+                <!-- <option value="system">System Preference</option> -->
                 <option value="dark">Dark Mode</option>
                 <option value="light">Light Mode</option>
               </select>

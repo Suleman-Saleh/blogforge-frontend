@@ -40,7 +40,6 @@
     opacity: 0.4;
   }
 
-  /* SIDEBAR */
   .sidebar {
     position: fixed;
     left: 0; top: 0; bottom: 0;
@@ -52,141 +51,46 @@
     z-index: 100;
   }
 
-  .logo {
-    padding: 28px 24px 24px;
-    border-bottom: 1px solid var(--border);
-  }
+  .logo { padding: 28px 24px 24px; border-bottom: 1px solid var(--border); }
+  .logo-mark { font-family: 'Playfair Display', serif; font-size: 22px; font-weight: 900; color: var(--accent); }
+  .logo-sub { font-family: 'DM Mono', monospace; font-size: 10px; color: var(--muted); letter-spacing: 2px; text-transform: uppercase; margin-top: 2px; }
 
-  .logo-mark {
-    font-family: 'Playfair Display', serif;
-    font-size: 22px;
-    font-weight: 900;
-    color: var(--accent);
-  }
-
-  .logo-sub {
-    font-family: 'DM Mono', monospace;
-    font-size: 10px;
-    color: var(--muted);
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    margin-top: 2px;
-  }
-
-  .nav {
-    padding: 16px 12px;
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-  }
+  .nav { padding: 16px 12px; flex: 1; display: flex; flex-direction: column; gap: 4px; }
 
   .nav-item {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    padding: 10px 12px;
-    border-radius: 8px;
-    cursor: pointer;
-    font-size: 14px;
-    font-weight: 500;
-    color: var(--muted);
-    transition: all 0.15s;
-    border: none;
-    background: none;
-    width: 100%;
-    text-align: left;
+    display: flex; align-items: center; gap: 10px; padding: 10px 12px;
+    border-radius: 8px; cursor: pointer; font-size: 14px; font-weight: 500;
+    color: var(--muted); transition: all 0.15s; border: none; background: none;
+    width: 100%; text-align: left;
   }
-
   .nav-item:hover { background: var(--surface2); color: var(--text); }
   .nav-item.active { background: rgba(232,197,71,0.12); color: var(--accent); }
   .nav-item .icon { font-size: 16px; width: 20px; text-align: center; }
 
-  .nav-section {
-    font-family: 'DM Mono', monospace;
-    font-size: 9px;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    color: var(--muted);
-    padding: 12px 12px 4px;
-    opacity: 0.6;
-  }
+  .nav-section { font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); padding: 12px 12px 4px; opacity: 0.6; }
 
-  .stats-bar {
-    padding: 16px;
-    border-top: 1px solid var(--border);
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-  }
+  .stats-bar { padding: 16px; border-top: 1px solid var(--border); display: flex; flex-direction: column; gap: 8px; }
+  .stat-row { display: flex; justify-content: space-between; font-size: 12px; color: var(--muted); }
+  .stat-val { font-family: 'DM Mono', monospace; color: var(--text); }
 
-  .stat-row {
-    display: flex;
-    justify-content: space-between;
-    font-size: 12px;
-    color: var(--muted);
-  }
-
-  .stat-val {
-    font-family: 'DM Mono', monospace;
-    color: var(--text);
-  }
-
-  .server-status {
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    font-family: 'DM Mono', monospace;
-    font-size: 11px;
-    color: var(--muted);
-    margin-top: 4px;
-  }
-
+  .server-status { display: flex; align-items: center; gap: 6px; font-family: 'DM Mono', monospace; font-size: 11px; color: var(--muted); margin-top: 4px; }
   .status-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--muted); }
   .status-dot.online { background: var(--success); animation: pulse 2s infinite; }
   .status-dot.offline { background: var(--danger); }
   @keyframes pulse { 0%,100% { opacity:1; } 50% { opacity:0.4; } }
 
-  /* MAIN */
-  .main {
-    margin-left: 240px;
-    min-height: 100vh;
-    position: relative;
-    z-index: 1;
-  }
+  .main { margin-left: 240px; min-height: 100vh; position: relative; z-index: 1; }
 
   .topbar {
-    padding: 20px 36px;
-    border-bottom: 1px solid var(--border);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background: rgba(10,10,15,0.8);
-    backdrop-filter: blur(8px);
-    position: sticky;
-    top: 0;
-    z-index: 50;
+    padding: 20px 36px; border-bottom: 1px solid var(--border);
+    display: flex; align-items: center; justify-content: space-between;
+    background: rgba(10,10,15,0.8); backdrop-filter: blur(8px);
+    position: sticky; top: 0; z-index: 50;
   }
-
-  .page-title {
-    font-family: 'Playfair Display', serif;
-    font-size: 24px;
-    font-weight: 700;
-  }
-
+  .page-title { font-family: 'Playfair Display', serif; font-size: 24px; font-weight: 700; }
   .topbar-actions { display: flex; gap: 10px; }
 
-  .btn {
-    padding: 9px 18px;
-    border-radius: 8px;
-    font-size: 13px;
-    font-weight: 500;
-    cursor: pointer;
-    border: none;
-    transition: all 0.15s;
-    font-family: 'DM Sans', sans-serif;
-  }
-
+  .btn { padding: 9px 18px; border-radius: 8px; font-size: 13px; font-weight: 500; cursor: pointer; border: none; transition: all 0.15s; font-family: 'DM Sans', sans-serif; }
   .btn-primary { background: var(--accent); color: #0a0a0f; }
   .btn-primary:hover { background: #f0d05a; transform: translateY(-1px); }
   .btn-ghost { background: transparent; color: var(--muted); border: 1px solid var(--border); }
@@ -194,98 +98,33 @@
   .btn-danger { background: transparent; color: var(--danger); border: 1px solid rgba(255,92,92,0.3); }
   .btn-danger:hover { background: rgba(255,92,92,0.1); }
 
-  /* PAGES */
   .page { display: none; padding: 36px; animation: fadeIn 0.2s ease; }
   .page.active { display: block; }
   @keyframes fadeIn { from { opacity:0; transform:translateY(8px); } to { opacity:1; transform:translateY(0); } }
 
-  /* GENERATE */
-  .generate-layout {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 24px;
-    max-width: 1200px;
-  }
+  .generate-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; max-width: 1200px; }
 
-  .card {
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: 16px;
-    padding: 28px;
-  }
+  .card { background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 28px; }
 
-  .card-title {
-    font-family: 'Playfair Display', serif;
-    font-size: 18px;
-    font-weight: 700;
-    margin-bottom: 20px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-  }
+  .card-title { font-family: 'Playfair Display', serif; font-size: 18px; font-weight: 700; margin-bottom: 20px; display: flex; align-items: center; gap: 10px; }
 
-  .badge {
-    font-family: 'DM Mono', monospace;
-    font-size: 9px;
-    background: rgba(232,197,71,0.15);
-    color: var(--accent);
-    padding: 3px 8px;
-    border-radius: 4px;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-  }
+  .badge { font-family: 'DM Mono', monospace; font-size: 9px; background: rgba(232,197,71,0.15); color: var(--accent); padding: 3px 8px; border-radius: 4px; letter-spacing: 1px; text-transform: uppercase; }
 
   .form-group { margin-bottom: 18px; }
 
-  label {
-    display: block;
-    font-size: 12px;
-    font-weight: 500;
-    color: var(--muted);
-    margin-bottom: 8px;
-    letter-spacing: 0.5px;
-    text-transform: uppercase;
-    font-family: 'DM Mono', monospace;
-  }
+  label { display: block; font-size: 12px; font-weight: 500; color: var(--muted); margin-bottom: 8px; letter-spacing: 0.5px; text-transform: uppercase; font-family: 'DM Mono', monospace; }
 
   input[type="text"], input[type="password"], textarea, select {
-    width: 100%;
-    background: var(--bg);
-    border: 1px solid var(--border);
-    border-radius: 10px;
-    padding: 12px 14px;
-    color: var(--text);
-    font-size: 14px;
-    font-family: 'DM Sans', sans-serif;
-    transition: border-color 0.15s;
-    outline: none;
-    resize: vertical;
+    width: 100%; background: var(--bg); border: 1px solid var(--border); border-radius: 10px;
+    padding: 12px 14px; color: var(--text); font-size: 14px; font-family: 'DM Sans', sans-serif;
+    transition: border-color 0.15s; outline: none; resize: vertical;
   }
-
   input:focus, textarea:focus, select:focus { border-color: var(--accent); }
   select option { background: var(--surface); }
 
-  .output-area {
-    background: var(--bg);
-    border: 1px solid var(--border);
-    border-radius: 10px;
-    padding: 20px;
-    min-height: 300px;
-    font-size: 14px;
-    line-height: 1.8;
-  }
+  .output-area { background: var(--bg); border: 1px solid var(--border); border-radius: 10px; padding: 20px; min-height: 300px; font-size: 14px; line-height: 1.8; }
 
-  .output-placeholder {
-    color: var(--muted);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 280px;
-    gap: 12px;
-    text-align: center;
-  }
-
+  .output-placeholder { color: var(--muted); display: flex; flex-direction: column; align-items: center; justify-content: center; height: 280px; gap: 12px; text-align: center; }
   .output-placeholder .icon-big { font-size: 40px; opacity: 0.3; }
 
   .generating { display: none; align-items: center; gap: 10px; color: var(--accent); font-family: 'DM Mono', monospace; font-size: 13px; margin-bottom: 16px; }
@@ -316,23 +155,12 @@
   .seo-dot.warn { background: var(--accent); }
   .seo-dot.bad { background: var(--danger); }
 
-  /* MANAGE */
   .blogs-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 20px; max-width: 1200px; }
 
-  .blog-card {
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: 14px;
-    padding: 22px;
-    transition: all 0.2s;
-    position: relative;
-    overflow: hidden;
-  }
-
+  .blog-card { background: var(--surface); border: 1px solid var(--border); border-radius: 14px; padding: 22px; transition: all 0.2s; position: relative; overflow: hidden; }
   .blog-card::before { content:''; position:absolute; top:0; left:0; right:0; height:2px; background:linear-gradient(90deg, var(--accent), var(--accent2)); opacity:0; transition:opacity 0.2s; }
   .blog-card:hover { border-color: var(--accent); transform: translateY(-2px); }
   .blog-card:hover::before { opacity: 1; }
-
   .blog-card-title { font-family: 'Playfair Display', serif; font-size: 16px; font-weight: 700; margin-bottom: 8px; line-height: 1.4; }
   .blog-card-meta { font-family: 'DM Mono', monospace; font-size: 11px; color: var(--muted); margin-bottom: 12px; display: flex; gap: 12px; }
   .blog-card-excerpt { font-size: 13px; color: var(--muted); line-height: 1.6; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
@@ -341,7 +169,6 @@
   .empty-state { text-align: center; padding: 80px 20px; color: var(--muted); grid-column: 1/-1; }
   .empty-state .big-icon { font-size: 52px; opacity: 0.2; margin-bottom: 16px; }
 
-  /* EDITOR */
   .editor-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; max-width: 1400px; height: calc(100vh - 180px); }
   .editor-pane { display: flex; flex-direction: column; gap: 12px; }
   #editor-title { font-family: 'Playfair Display', serif; font-size: 18px; }
@@ -355,16 +182,13 @@
   .preview-pane li { margin-bottom: 6px; line-height: 1.7; font-size: 14px; }
   .preview-pane strong { color: var(--text); }
 
-  /* SETTINGS */
   .settings-layout { max-width: 600px; display: flex; flex-direction: column; gap: 20px; }
 
-  /* TOAST */
   .toast { position: fixed; bottom: 24px; right: 24px; background: var(--surface2); border: 1px solid var(--border); border-radius: 10px; padding: 14px 20px; font-size: 14px; z-index: 9999; display: flex; align-items: center; gap: 10px; transform: translateY(100px); opacity: 0; transition: all 0.3s cubic-bezier(0.34,1.56,0.64,1); max-width: 320px; }
   .toast.show { transform: translateY(0); opacity: 1; }
   .toast.success { border-color: rgba(74,222,128,0.3); }
   .toast.error { border-color: rgba(255,92,92,0.3); }
 
-  /* MODAL */
   .modal-backdrop { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.7); z-index: 200; align-items: center; justify-content: center; backdrop-filter: blur(4px); }
   .modal-backdrop.show { display: flex; }
   .modal { background: var(--surface); border: 1px solid var(--border); border-radius: 20px; padding: 32px; max-width: 480px; width: 90%; animation: fadeIn 0.2s ease; }
@@ -388,7 +212,7 @@
 <aside class="sidebar">
   <div class="logo">
     <div class="logo-mark">AI BlogWriter</div>
-    <div class="logo-sub">CMS v2.0</div>
+    <div class="logo-sub">SEO Generator</div>
   </div>
   <nav class="nav">
     <div class="nav-section">Main</div>
@@ -457,7 +281,6 @@
             ✦ Generate SEO Blog
           </button>
         </div>
-
         <div class="card">
           <div class="card-title">SEO Checklist</div>
           <div style="display:flex;flex-direction:column;gap:8px;" id="seo-checklist">
@@ -465,7 +288,6 @@
           </div>
         </div>
       </div>
-
       <div style="display:flex;flex-direction:column;gap:12px;">
         <div class="output-area" id="output-area">
           <div class="generating" id="generating-indicator">
@@ -528,21 +350,32 @@
   <!-- SETTINGS PAGE -->
   <div class="page" id="page-settings">
     <div class="settings-layout">
+
       <div class="card">
-        <div class="card-title">Backend Configuration</div>
+        <div class="card-title">✦ Preferences</div>
         <div class="form-group">
-          <label>Backend API URL</label>
-          <input type="text" id="backend-url-input" placeholder="https://your-app.vercel.app"/>
-          <div style="font-size:12px;color:var(--muted);margin-top:8px;">
-            Paste your Vercel backend URL here after deploying the backend
-          </div>
+          <label>Default Tone</label>
+          <select id="pref-tone" onchange="savePrefs()">
+            <option value="informative and friendly">Informative & Friendly</option>
+            <option value="professional and authoritative">Professional & Authoritative</option>
+            <option value="casual and conversational">Casual & Conversational</option>
+            <option value="persuasive and engaging">Persuasive & Engaging</option>
+            <option value="educational and detailed">Educational & Detailed</option>
+          </select>
         </div>
-        <button class="btn btn-primary" onclick="saveBackendUrl()">Save & Test Connection</button>
+        <div class="form-group">
+          <label>Default Length</label>
+          <select id="pref-length" onchange="savePrefs()">
+            <option value="800-1000">Short (800-1000 words)</option>
+            <option value="1000-1500">Medium (1000-1500 words)</option>
+            <option value="1500-2500">Long (1500-2500 words)</option>
+          </select>
+        </div>
       </div>
 
       <div class="card">
-        <div class="card-title">Data Management</div>
-        <p style="font-size:13px;color:var(--muted);margin-bottom:16px;">All blogs are stored in your browser locally.</p>
+        <div class="card-title">◈ Data Management</div>
+        <p style="font-size:13px;color:var(--muted);margin-bottom:16px;">All your blogs are saved in your browser locally.</p>
         <div style="display:flex;gap:10px;flex-wrap:wrap;">
           <button class="btn btn-ghost" onclick="exportAll()">↓ Export All Blogs</button>
           <button class="btn btn-danger" onclick="confirmClearAll()">⊗ Clear All Data</button>
@@ -550,24 +383,61 @@
       </div>
 
       <div class="card">
-        <div class="card-title">About</div>
+        <div class="card-title">⊙ Admin <span class="badge">Protected</span></div>
+        <p style="font-size:13px;color:var(--muted);margin-bottom:16px;">Access advanced backend configuration.</p>
+        <button class="btn btn-ghost" onclick="promptAdminPassword()">🔒 Admin Settings</button>
+      </div>
+
+      <div class="card">
+        <div class="card-title">◎ About</div>
         <p style="font-size:13px;color:var(--muted);line-height:1.8;">
-          BlogForge CMS v2.0<br>
-          Backend: FastAPI on Vercel<br>
-          AI: Groq + Llama 3.3 70B<br>
+          AI BlogWriter — Free SEO Blog Generator<br>
+          Powered by Groq + Llama 3.3 70B<br>
           <span style="color:var(--accent);font-family:'DM Mono',monospace;font-size:11px;">100% Free — Built with ♥</span>
         </p>
       </div>
+
     </div>
   </div>
 </main>
 
-<!-- MODAL -->
+<!-- MAIN MODAL -->
 <div class="modal-backdrop" id="modal-backdrop">
   <div class="modal">
     <div class="modal-title" id="modal-title"></div>
     <div id="modal-body"></div>
     <div class="modal-actions" id="modal-actions"></div>
+  </div>
+</div>
+
+<!-- ADMIN PASSWORD MODAL -->
+<div class="modal-backdrop" id="admin-modal-backdrop">
+  <div class="modal">
+    <div class="modal-title">🔒 Admin Access</div>
+    <div class="form-group">
+      <label>Admin Password</label>
+      <input type="password" id="admin-pass-input" placeholder="Enter password..." onkeydown="if(event.key==='Enter') checkAdminPassword()"/>
+    </div>
+    <div class="modal-actions">
+      <button class="btn btn-ghost" onclick="closeAdminModal()">Cancel</button>
+      <button class="btn btn-primary" onclick="checkAdminPassword()">Enter</button>
+    </div>
+  </div>
+</div>
+
+<!-- ADMIN SETTINGS MODAL -->
+<div class="modal-backdrop" id="admin-settings-backdrop">
+  <div class="modal">
+    <div class="modal-title">⚙️ Backend Configuration</div>
+    <div class="form-group">
+      <label>Backend API URL</label>
+      <input type="text" id="backend-url-input" placeholder="https://your-app.vercel.app"/>
+      <div style="font-size:12px;color:var(--muted);margin-top:8px;">Your Vercel backend deployment URL</div>
+    </div>
+    <div class="modal-actions">
+      <button class="btn btn-ghost" onclick="closeAdminSettings()">Cancel</button>
+      <button class="btn btn-primary" onclick="saveBackendUrl()">Save & Test</button>
+    </div>
   </div>
 </div>
 
@@ -578,12 +448,8 @@
 </div>
 
 <script>
-// ==============================
-// ⚠️ IMPORTANT: After deploying backend to Vercel,
-// replace the URL below with your actual backend URL
-// Example: "https://blogforge-backend.vercel.app"
-// ==============================
-const DEFAULT_BACKEND_URL = "https://blogforge-ashy.vercel.app/";
+const DEFAULT_BACKEND_URL = "https://blogforge-ashy.vercel.app";
+const ADMIN_PASSWORD = "suleman123"; // ← Change this to your own password
 
 let BACKEND_URL = localStorage.getItem('blogforge_backend_url') || DEFAULT_BACKEND_URL;
 let blogs = JSON.parse(localStorage.getItem('blogforge_blogs') || '[]');
@@ -604,23 +470,21 @@ const PAGES = {
 document.addEventListener('DOMContentLoaded', () => {
   document.getElementById('editor-content').addEventListener('input', updateEditorPreview);
   document.getElementById('editor-title').addEventListener('input', updateEditorPreview);
-  document.getElementById('backend-url-input').value = BACKEND_URL;
   updateStats();
   checkServerStatus();
+  loadPrefs();
 });
 
 // ==============================
-// SERVER STATUS CHECK
+// SERVER STATUS
 // ==============================
 async function checkServerStatus() {
   const dot = document.getElementById('status-dot');
   const text = document.getElementById('status-text');
   try {
     const res = await fetch(`${BACKEND_URL}/health`, { signal: AbortSignal.timeout(6000) });
-    if (res.ok) {
-      dot.className = 'status-dot online';
-      text.textContent = 'Server online';
-    } else throw new Error();
+    if (res.ok) { dot.className = 'status-dot online'; text.textContent = 'Server online'; }
+    else throw new Error();
   } catch {
     dot.className = 'status-dot offline';
     text.textContent = 'Server offline';
@@ -649,12 +513,6 @@ async function generateBlog() {
   const topicRaw = document.getElementById('topic-input').value.trim();
   if (!topicRaw) { showToast('Please enter a topic!', 'error'); return; }
 
-  if (!BACKEND_URL || BACKEND_URL.includes('YOUR-BACKEND-URL')) {
-    showToast('Please set your backend URL in Settings first!', 'error');
-    showPage('settings');
-    return;
-  }
-
   const tone = document.getElementById('tone-select').value;
   const length = document.getElementById('length-select').value;
 
@@ -676,12 +534,7 @@ async function generateBlog() {
     if (!res.ok) throw new Error(data.detail || 'Server error');
 
     const content = data.content;
-    currentBlog = {
-      title: extractTitle(content) || topicRaw,
-      content,
-      topic: data.topic,
-      date: new Date().toISOString()
-    };
+    currentBlog = { title: extractTitle(content) || topicRaw, content, topic: data.topic, date: new Date().toISOString() };
 
     document.getElementById('generating-indicator').classList.remove('show');
     const preview = document.getElementById('blog-preview');
@@ -724,17 +577,10 @@ function updateSEOChecklist(content) {
     { label: `Word count (~${wordCount})`, pass: wordCount >= 800 },
   ];
   document.getElementById('seo-checklist').innerHTML = checks.map(c =>
-    `<div class="seo-score">
-      <span class="seo-dot${c.pass ? '' : ' bad'}"></span>
-      <span style="color:${c.pass ? 'var(--success)' : 'var(--danger)'}">${c.pass ? '✓' : '✗'}</span>
-      ${c.label}
-    </div>`
+    `<div class="seo-score"><span class="seo-dot${c.pass ? '' : ' bad'}"></span><span style="color:${c.pass ? 'var(--success)' : 'var(--danger)'}">${c.pass ? '✓' : '✗'}</span>${c.label}</div>`
   ).join('');
 }
 
-// ==============================
-// MARKDOWN RENDERER
-// ==============================
 function renderMarkdown(md) {
   let html = '';
   const metaMatch = md.match(/---\n([\s\S]*?)\n---/);
@@ -756,24 +602,15 @@ function renderMarkdown(md) {
     if (t.startsWith('# ')) html += `<h1>${t.slice(2)}</h1>`;
     else if (t.startsWith('## ')) html += `<h2>${t.slice(3)}</h2>`;
     else if (t.startsWith('### ')) html += `<h3 style="font-size:15px;margin:12px 0 6px;">${t.slice(4)}</h3>`;
-    else if (t.startsWith('- ') || t.startsWith('* ')) {
-      if (!inList) { html += '<ul>'; inList = true; }
-      html += `<li>${fmt(t.slice(2))}</li>`;
-    } else if (/^\d+\. /.test(t)) {
-      if (!inList) { html += '<ol>'; inList = true; }
-      html += `<li>${fmt(t.replace(/^\d+\. /, ''))}</li>`;
-    } else {
-      if (inList) { html += '</ul>'; inList = false; }
-      html += `<p>${fmt(t)}</p>`;
-    }
+    else if (t.startsWith('- ') || t.startsWith('* ')) { if (!inList) { html += '<ul>'; inList = true; } html += `<li>${fmt(t.slice(2))}</li>`; }
+    else if (/^\d+\. /.test(t)) { if (!inList) { html += '<ol>'; inList = true; } html += `<li>${fmt(t.replace(/^\d+\. /, ''))}</li>`; }
+    else { if (inList) { html += '</ul>'; inList = false; } html += `<p>${fmt(t)}</p>`; }
   }
   return html;
 }
 
 function fmt(t) {
-  return t
-    .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
-    .replace(/\*(.+?)\*/g, '<em>$1</em>');
+  return t.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>').replace(/\*(.+?)\*/g, '<em>$1</em>');
 }
 
 // ==============================
@@ -790,15 +627,13 @@ function saveBlog() {
 function downloadBlog(format) {
   if (!currentBlog) return;
   const name = (currentBlog.title || 'blog').replace(/[^a-z0-9]/gi, '-').toLowerCase();
-  const content = format === 'txt' ? currentBlog.content.replace(/[#*`_]/g, '') : currentBlog.content;
-  dlFile(name + '.' + format, content);
+  dlFile(name + '.' + format, format === 'txt' ? currentBlog.content.replace(/[#*`_]/g, '') : currentBlog.content);
 }
 
 function dlFile(name, content) {
   const a = document.createElement('a');
   a.href = 'data:text/plain;charset=utf-8,' + encodeURIComponent(content);
-  a.download = name;
-  a.click();
+  a.download = name; a.click();
 }
 
 function openInEditor() {
@@ -811,14 +646,11 @@ function openInEditor() {
 }
 
 // ==============================
-// MANAGE / LIBRARY
+// MANAGE
 // ==============================
 function renderBlogs() {
   const grid = document.getElementById('blogs-grid');
-  if (!blogs.length) {
-    grid.innerHTML = `<div class="empty-state"><div class="big-icon">◈</div><p>No blogs yet.<br>Generate your first!</p></div>`;
-    return;
-  }
+  if (!blogs.length) { grid.innerHTML = `<div class="empty-state"><div class="big-icon">◈</div><p>No blogs yet.<br>Generate your first!</p></div>`; return; }
   grid.innerHTML = blogs.map((b, i) => {
     const date = new Date(b.date).toLocaleDateString('en-US', { month:'short', day:'numeric', year:'numeric' });
     const words = (b.content || '').split(/\s+/).length;
@@ -851,8 +683,7 @@ function deleteBlog(i) {
     { label: '⊗ Delete', cls: 'btn-danger', action: () => {
       blogs.splice(i, 1);
       localStorage.setItem('blogforge_blogs', JSON.stringify(blogs));
-      closeModal(); renderBlogs(); updateStats();
-      showToast('Blog deleted');
+      closeModal(); renderBlogs(); updateStats(); showToast('Blog deleted');
     }}
   ]);
 }
@@ -872,10 +703,7 @@ function updateEditorPreview() {
   const words = content.split(/\s+/).filter(w => w).length;
   document.getElementById('editor-word-count').textContent = `${words} words`;
   const preview = document.getElementById('editor-preview');
-  if (!content && !title) {
-    preview.innerHTML = '<div style="color:var(--muted);text-align:center;padding:40px;font-size:14px;">Start typing to see preview...</div>';
-    return;
-  }
+  if (!content && !title) { preview.innerHTML = '<div style="color:var(--muted);text-align:center;padding:40px;font-size:14px;">Start typing to see preview...</div>'; return; }
   preview.innerHTML = renderMarkdown(title ? `# ${title}\n\n${content}` : content);
 }
 
@@ -898,19 +726,69 @@ function downloadEditorBlog(format) {
 }
 
 // ==============================
-// SETTINGS
+// PREFERENCES
 // ==============================
+function savePrefs() {
+  const tone = document.getElementById('pref-tone').value;
+  const length = document.getElementById('pref-length').value;
+  localStorage.setItem('pref_tone', tone);
+  localStorage.setItem('pref_length', length);
+  document.getElementById('tone-select').value = tone;
+  document.getElementById('length-select').value = length;
+  showToast('Preferences saved!', 'success');
+}
+
+function loadPrefs() {
+  const tone = localStorage.getItem('pref_tone');
+  const length = localStorage.getItem('pref_length');
+  if (tone) { document.getElementById('pref-tone').value = tone; document.getElementById('tone-select').value = tone; }
+  if (length) { document.getElementById('pref-length').value = length; document.getElementById('length-select').value = length; }
+}
+
+// ==============================
+// ADMIN
+// ==============================
+function promptAdminPassword() {
+  document.getElementById('admin-pass-input').value = '';
+  document.getElementById('admin-modal-backdrop').classList.add('show');
+  setTimeout(() => document.getElementById('admin-pass-input').focus(), 100);
+}
+
+function closeAdminModal() {
+  document.getElementById('admin-modal-backdrop').classList.remove('show');
+}
+
+function checkAdminPassword() {
+  const pass = document.getElementById('admin-pass-input').value;
+  if (pass === ADMIN_PASSWORD) {
+    closeAdminModal();
+    document.getElementById('backend-url-input').value = BACKEND_URL;
+    document.getElementById('admin-settings-backdrop').classList.add('show');
+  } else {
+    showToast('Wrong password!', 'error');
+    document.getElementById('admin-pass-input').value = '';
+  }
+}
+
+function closeAdminSettings() {
+  document.getElementById('admin-settings-backdrop').classList.remove('show');
+}
+
 function saveBackendUrl() {
   const url = document.getElementById('backend-url-input').value.trim().replace(/\/$/, '');
   if (!url) { showToast('Please enter a URL', 'error'); return; }
   BACKEND_URL = url;
   localStorage.setItem('blogforge_backend_url', url);
+  closeAdminSettings();
   showToast('Saved! Testing connection...', 'success');
   checkServerStatus();
 }
 
+// ==============================
+// DATA MANAGEMENT
+// ==============================
 function exportAll() {
-  dlFile('blogforge-export.json', JSON.stringify(blogs, null, 2));
+  dlFile('blogwriter-export.json', JSON.stringify(blogs, null, 2));
   showToast('Exported ' + blogs.length + ' blogs!', 'success');
 }
 
@@ -918,11 +796,8 @@ function confirmClearAll() {
   showModal('Clear All Data', 'This deletes ALL saved blogs. Cannot be undone.', [
     { label: 'Cancel', cls: 'btn-ghost', action: closeModal },
     { label: '⊗ Clear', cls: 'btn-danger', action: () => {
-      localStorage.clear();
-      blogs = [];
-      BACKEND_URL = DEFAULT_BACKEND_URL;
-      closeModal(); updateStats();
-      showToast('All data cleared');
+      localStorage.clear(); blogs = []; BACKEND_URL = DEFAULT_BACKEND_URL;
+      closeModal(); updateStats(); showToast('All data cleared');
     }}
   ]);
 }
@@ -941,20 +816,16 @@ function updateStats() {
 function showModal(title, body, actions) {
   document.getElementById('modal-title').textContent = title;
   document.getElementById('modal-body').innerHTML = `<p style="font-size:14px;color:var(--muted);line-height:1.7;">${body}</p>`;
-  document.getElementById('modal-actions').innerHTML = actions.map((a, i) =>
-    `<button class="btn ${a.cls}" id="mb${i}">${a.label}</button>`
-  ).join('');
+  document.getElementById('modal-actions').innerHTML = actions.map((a, i) => `<button class="btn ${a.cls}" id="mb${i}">${a.label}</button>`).join('');
   actions.forEach((a, i) => document.getElementById('mb' + i).addEventListener('click', a.action));
   document.getElementById('modal-backdrop').classList.add('show');
 }
 
-function closeModal() {
-  document.getElementById('modal-backdrop').classList.remove('show');
-}
+function closeModal() { document.getElementById('modal-backdrop').classList.remove('show'); }
 
-document.getElementById('modal-backdrop').addEventListener('click', e => {
-  if (e.target.id === 'modal-backdrop') closeModal();
-});
+document.getElementById('modal-backdrop').addEventListener('click', e => { if (e.target.id === 'modal-backdrop') closeModal(); });
+document.getElementById('admin-modal-backdrop').addEventListener('click', e => { if (e.target.id === 'admin-modal-backdrop') closeAdminModal(); });
+document.getElementById('admin-settings-backdrop').addEventListener('click', e => { if (e.target.id === 'admin-settings-backdrop') closeAdminSettings(); });
 
 // ==============================
 // TOAST
